@@ -7,3 +7,4 @@
 
 > Data Structure
 
+> Machine learning (watching video)
