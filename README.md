@@ -2,7 +2,7 @@
 > This is repository that I organize what I studied today.
 
 
-## Studying
+## Studying . .
 > Algorithm
 
 > Data Structure
