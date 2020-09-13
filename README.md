@@ -7,6 +7,6 @@
 
 > Data Structure
 
-> Machine learning (watching video)
+> Machine learning 
 
 > Java
