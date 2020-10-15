@@ -1,20 +1,15 @@
+import java.util.Scanner;
 
-// 명령행 인자 중 정수만을 골라 합을 구하는 프로그램
 public class Add {
     public static void main(String[] args) {
-        double sum = 0.0;
-        int countInt = 0;
-        try{
-            for (int i=0; i<args.length; i++){
-                sum += Integer.parseInt(args[i]);
-                countInt += 1;
-            }
-
+        Scanner scanner = new Scanner(System.in);
+        int sum=0;
+        while(true){
+            System.out.print("양의 정수를 입력하세요:");
+            int num = scanner.nextInt();
+            if (num == -1){break;}
+            if (num%2 == 0){sum+= num;}
         }
-        catch (NumberFormatException e){
-        }
-
-        System.out.println(sum/countInt);
-
+        System.out.println("입력한 양의 정수 중에서 짝수의 합은 "+sum);
     }
 }
