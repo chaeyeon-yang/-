@@ -1,9 +1,8 @@
-package Problem27;
+//p.385 #4
+
+package base;
 
 public class Shape {
-    public Shape next;
-    public Shape(){
-        next = null; }
     public void draw(){
         System.out.println("Shape");
     }
