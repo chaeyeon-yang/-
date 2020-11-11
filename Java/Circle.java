@@ -1,10 +1,6 @@
-//p.385 #4
+package Chapter7;
 
-package derived;
-
-import base.Shape;
-
-public class Circle extends Shape {
+public class Circle extends Shape{
     @Override
     public void draw() {
         System.out.println("Circle");

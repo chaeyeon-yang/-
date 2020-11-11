@@ -1,4 +1,4 @@
-package Problem27;
+package Chapter7;
 
 public class Line extends Shape{
     @Override

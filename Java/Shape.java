@@ -1,6 +1,4 @@
-//p.385 #4
-
-package base;
+package Chapter7;
 
 public class Shape {
     public void draw(){
