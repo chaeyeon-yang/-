@@ -1,29 +1,49 @@
-import java.util.Scanner;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 
-public class Exam2 {
-    public static void main(String[] args) {
-        String array[] = new String[10];
-        int num[] = new int[10];
-        Scanner scanner = new Scanner(System.in);
+public class Exam2 extends JFrame {
 
-        System.out.println("정수를 입력하세요");
-        for(int i=0; i<10; i++){
-            num[i] = scanner.nextInt();
-        }
-        for (int i=0; i<10; i++){
-            array[i] = ((10*i)+"~"+((10*(i+1))-1))+":";
-        }
-        for (int i=0; i<10; i++){
-            for (int j=0; j<10; j++){
-                if ((10*i)<=num[j] && num[j]<=((10*(i+1))-1)){
-                    array[i] += "*";
-                }
+    private static int Num = 0;
+    JLabel la = new JLabel("count = "+Num);
+    public Exam2(){
+        setTitle("Counter 예제");
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+
+        la.setSize(100,20);
+        la.setLocation(100,50);
+
+        Container c = getContentPane();
+        c.setLayout(null);
+        c.add(la);
+        c.addKeyListener(new MyKeyListener());
+
+        setSize(300,200);
+        setVisible(true);
+
+        c.setFocusable(true);
+        c.requestFocus();
+    }
+
+    class MyKeyListener extends KeyAdapter {
+        @Override
+        public void keyPressed(KeyEvent e) {
+            int keycode = e.getKeyCode();
+            if (keycode == KeyEvent.VK_UP) {
+                Num++;
+                la.setText("count = " + Num);
+            }
+            if (keycode == KeyEvent.VK_DOWN) {
+                Num--;
+                la.setText("count = " + Num);
             }
         }
 
-        for (int i=0; i<10; i++) {
-            System.out.println(array[i]);
-        }
+    }
 
+    public static void main(String[] args) {
+        new Exam2();
     }
 }
